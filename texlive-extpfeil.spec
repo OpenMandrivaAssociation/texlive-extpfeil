@@ -1,3 +1,9 @@
+# revision 16243
+# category Package
+# catalog-ctan /macros/latex/contrib/extpfeil
+# catalog-date 2009-10-31 20:51:21 +0100
+# catalog-license lppl1.3
+# catalog-version 0.4
 Name:		texlive-extpfeil
 Version:	0.4
 Release:	1
@@ -44,6 +50,7 @@ command to simply create new ones.
 #- source
 %doc %{_texmfdistdir}/source/latex/extpfeil/extpfeil.dtx
 %doc %{_texmfdistdir}/source/latex/extpfeil/extpfeil.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -54,3 +61,5 @@ command to simply create new ones.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
