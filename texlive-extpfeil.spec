@@ -50,3 +50,17 @@ command to simply create new ones.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.4-2
++ Revision: 751748
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.4-1
++ Revision: 718405
+- texlive-extpfeil
+- texlive-extpfeil
+- texlive-extpfeil
+- texlive-extpfeil
+
