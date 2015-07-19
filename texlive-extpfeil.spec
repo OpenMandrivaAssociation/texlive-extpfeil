@@ -6,7 +6,7 @@
 # catalog-version 0.4
 Name:		texlive-extpfeil
 Version:	0.4
-Release:	9
+Release:	10
 Summary:	Extensible arrows in mathematics
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/extpfeil
