@@ -1,6 +1,6 @@
 Name:		texlive-extpfeil
 Version:	16243
-Release:	1
+Release:	2
 Summary:	Extensible arrows in mathematics
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/extpfeil
