@@ -3,7 +3,7 @@ Version:	16243
 Release:	2
 Summary:	Extensible arrows in mathematics
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/extpfeil
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/extpfeil
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/extpfeil.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/extpfeil.doc.r%{version}.tar.xz
