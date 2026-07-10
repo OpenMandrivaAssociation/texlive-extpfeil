@@ -1,47 +1,24 @@
-Name:		texlive-extpfeil
-Version:	16243
-Release:	2
+%global tl_name extpfeil
+%global tl_revision 77682
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	0.4
+Release:	%{tl_revision}.1
 Summary:	Extensible arrows in mathematics
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/extpfeil
-License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/extpfeil.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/extpfeil.doc.r%{version}.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/extpfeil.source.r%{version}.tar.xz
+License:	lppl1.3
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/extpfeil.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/extpfeil.doc.r%{tl_revision}.tar.xz
+Source2:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/extpfeil.source.r%{tl_revision}.tar.xz
 BuildArch:	noarch
+BuildSystem:	texlive
 BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+%texlive_base_requires
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-The exptfeil package provides some more extensible arrows
-(usable in the same way as \xleftarrow from amsmath), and a
-command to simply create new ones.
+The package provides some more extensible arrows (usable in the same way
+as \xleftarrow from amsmath), and a simple command to create new ones.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/tex/latex/extpfeil/extpfeil.sty
-%doc %{_texmfdistdir}/doc/latex/extpfeil/README
-%doc %{_texmfdistdir}/doc/latex/extpfeil/extpfeil.pdf
-#- source
-%doc %{_texmfdistdir}/source/latex/extpfeil/extpfeil.dtx
-%doc %{_texmfdistdir}/source/latex/extpfeil/extpfeil.ins
-
-#-----------------------------------------------------------------------
-%prep
-%setup -c -a1 -a2
-%autopatch -p1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
